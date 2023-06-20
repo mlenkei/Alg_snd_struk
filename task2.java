@@ -81,7 +81,7 @@ public class Main {
             ListItem<T> next;
         }
 
-        // Проверка на то, пустая ли голова
+        // Проверка на то, что head не пустой
         public boolean isEmpty() {
             return head == null;
         }
@@ -93,7 +93,7 @@ public class Main {
             ListItem<T> newItem = new ListItem<>();
             newItem.data = item;
 
-            // Если голова и хвост пустая, то присваеваем newItem
+            // Если head и tail пустые, то присваеваем newItem
             if (isEmpty()) {
                 head = newItem;
                 tail = newItem;
@@ -107,7 +107,7 @@ public class Main {
 
         // Метод разворота списка
         public void reverse() {
-            if (!isEmpty() && head.next != null) { // Если не пусто и голова не равна нулю
+            if (!isEmpty() && head.next != null) { // Если не пусто и head не равty нулю
                 tail = head;
                 ListItem<T> current = head.next;
                 head.next = null;
